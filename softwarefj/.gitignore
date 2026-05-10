@@ -1,0 +1,7 @@
+# Bytecode compilado de Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Archivos de log generados en ejecución
+*.log
