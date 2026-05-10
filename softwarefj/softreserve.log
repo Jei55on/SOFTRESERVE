@@ -1,0 +1,220 @@
+
+======================================================================
+  SISTEMA SOFTRESERVE — Sesión iniciada: 2026-05-10 09:17:05
+======================================================================
+[2026-05-10 09:17:05] [INFO        ] GestorSistema inicializado. Sistema SOFTRESERVE listo.
+[2026-05-10 09:17:05] [INFO        ] Cliente registrado: Ana Torres [179ACED7] | ana.torres@softreserve.com
+[2026-05-10 09:17:05] [INFO        ] Cliente registrado: Carlos Mendoza [0CDE497F] | cmendoza@empresa.co
+[2026-05-10 09:17:05] [INFO        ] Cliente registrado: Laura Ríos [39DC01CD] | lrios@correo.com
+[2026-05-10 09:17:05] [ERROR       ] Fallo al registrar cliente '' | ClienteInvalidoError: [Código 1001] Dato inválido en el campo 'nombre' (valor recibido: ''). Razón: debe tener al menos 3 caracteres
+[2026-05-10 09:17:05] [ERROR       ] Fallo al registrar cliente '12Hacker99' | ClienteInvalidoError: [Código 1001] Dato inválido en el campo 'nombre' (valor recibido: '12Hacker99'). Razón: solo se permiten letras y espacios
+[2026-05-10 09:17:05] [ERROR       ] Fallo al registrar cliente 'Pedro Ruiz' | ClienteInvalidoError: [Código 1001] Dato inválido en el campo 'correo' (valor recibido: 'correo-invalido'). Razón: formato inválido (ej: usuario@dominio.com)
+[2026-05-10 09:17:05] [ERROR       ] Fallo al registrar cliente 'Sofía Cruz' | ClienteInvalidoError: [Código 1001] Dato inválido en el campo 'telefono' (valor recibido: 'abc-xyz'). Razón: formato inválido (ej: +57 310 5551234 o 3105551234)
+[2026-05-10 09:17:05] [INFO        ] Servicio registrado: 'Sala A' [3024B632] | Base: $80,000
+[2026-05-10 09:17:05] [INFO        ] Servicio registrado: 'Sala B' [182E1EF0] | Base: $50,000
+[2026-05-10 09:17:05] [INFO        ] Servicio registrado: 'Portátil HP ProBook' [F1426802] | Base: $35,000
+[2026-05-10 09:17:05] [INFO        ] Servicio registrado: 'Asesoría en Arquitectura de Software' [741650DC] | Base: $120,000
+[2026-05-10 09:17:05] [INFO        ] Reserva creada [B94E00AA] | Cliente: Ana Torres | Servicio: Sala A | Estado: PENDIENTE
+[2026-05-10 09:17:05] [INFO        ] Reserva B94E00AA CONFIRMADA | Cliente: Ana Torres | Servicio: Sala A | Costo: $342,720.00
+[2026-05-10 09:17:05] [INFO        ] Intento de confirmación procesado — Reserva B94E00AA → Estado final: CONFIRMADA
+[2026-05-10 09:17:05] [INFO        ] Reserva creada [4FFA3797] | Cliente: Carlos Mendoza | Servicio: Portátil HP ProBook | Estado: PENDIENTE
+[2026-05-10 09:17:05] [INFO        ] Reserva 4FFA3797 CONFIRMADA | Cliente: Carlos Mendoza | Servicio: Portátil HP ProBook | Costo: $791,350.00
+[2026-05-10 09:17:05] [INFO        ] Intento de confirmación procesado — Reserva 4FFA3797 → Estado final: CONFIRMADA
+[2026-05-10 09:17:05] [INFO        ] Reserva creada [09195E0C] | Cliente: Laura Ríos | Servicio: Asesoría en Arquitectura de Software | Estado: PENDIENTE
+[2026-05-10 09:17:05] [INFO        ] Reserva 09195E0C CONFIRMADA | Cliente: Laura Ríos | Servicio: Asesoría en Arquitectura de Software | Costo: $1,156,680.00
+[2026-05-10 09:17:05] [INFO        ] Intento de confirmación procesado — Reserva 09195E0C → Estado final: CONFIRMADA
+[2026-05-10 09:17:05] [INFO        ] Reserva creada [6BCF90FC] | Cliente: Ana Torres | Servicio: Sala A | Estado: PENDIENTE
+[2026-05-10 09:17:05] [ERROR       ] Error al confirmar reserva 6BCF90FC (Servicio: Sala A) | DuracionInvalidaError: [Código 3002] Duración 12.0h fuera del rango permitido [1.0h – 8.0h].
+[2026-05-10 09:17:05] [INFO        ] Intento de confirmación procesado — Reserva 6BCF90FC → Estado final: PENDIENTE
+[2026-05-10 09:17:05] [ERROR       ] No se pudo confirmar reserva [6BCF90FC] | DuracionInvalidaError: [Código 3002] Duración 12.0h fuera del rango permitido [1.0h – 8.0h].
+[2026-05-10 09:17:05] [INFO        ] Reserva creada [117523B7] | Cliente: Carlos Mendoza | Servicio: Sala B | Estado: PENDIENTE
+[2026-05-10 09:17:05] [ERROR       ] Error al confirmar reserva 117523B7 (Servicio: Sala B) | CapacidadExcedidaError: [Código 2003] El servicio 'Sala B' permite máximo 6 participante(s), pero se solicitaron 15.
+[2026-05-10 09:17:05] [INFO        ] Intento de confirmación procesado — Reserva 117523B7 → Estado final: PENDIENTE
+[2026-05-10 09:17:05] [ERROR       ] No se pudo confirmar reserva [117523B7] | CapacidadExcedidaError: [Código 2003] El servicio 'Sala B' permite máximo 6 participante(s), pero se solicitaron 15.
+[2026-05-10 09:17:05] [INFO        ] Reserva 09195E0C CANCELADA | Motivo: El cliente reprogramó la sesión | Cliente: Laura Ríos
+[2026-05-10 09:17:05] [ERROR       ] No se pudo cancelar reserva [09195E0C] | ReservaCanceladaError: [Código 3003] La reserva '09195E0C' ya fue cancelada y no puede modificarse.
+[2026-05-10 09:17:05] [ERROR       ] Doble cancelación intentada | ReservaInvalidaError: [Código 3001] Reserva inválida: intento de doble cancelación detectado | Causa original: [Código 3003] La reserva '09195E0C' ya fue cancelada y no puede modificarse.
+[2026-05-10 09:17:05] [INFO        ] Reserva creada [5F5847F9] | Cliente: Ana Torres | Servicio: Portátil HP ProBook | Estado: PENDIENTE
+[2026-05-10 09:17:05] [ERROR       ] Error al confirmar reserva 5F5847F9 (Servicio: Portátil HP ProBook) | ServicioNoDisponibleError: [Código 2001] El servicio 'Portátil HP ProBook' no está disponible. Motivo: el servicio ha sido deshabilitado por el administrador
+[2026-05-10 09:17:05] [INFO        ] Intento de confirmación procesado — Reserva 5F5847F9 → Estado final: PENDIENTE
+[2026-05-10 09:17:05] [ERROR       ] No se pudo confirmar reserva [5F5847F9] | ServicioNoDisponibleError: [Código 2001] El servicio 'Portátil HP ProBook' no está disponible. Motivo: el servicio ha sido deshabilitado por el administrador
+[2026-05-10 09:17:05] [INFO        ] Reserva creada [B3F0EA16] | Cliente: Laura Ríos | Servicio: Sala B | Estado: PENDIENTE
+[2026-05-10 09:17:05] [INFO        ] Reserva B3F0EA16 CONFIRMADA | Cliente: Laura Ríos | Servicio: Sala B | Costo: $113,050.00
+[2026-05-10 09:17:05] [INFO        ] Intento de confirmación procesado — Reserva B3F0EA16 → Estado final: CONFIRMADA
+[2026-05-10 09:17:05] [INFO        ] Reserva B3F0EA16 PROCESADA | Servicio prestado: Sala B | Cliente: Laura Ríos
+
+======================================================================
+  SISTEMA SOFTRESERVE — Sesión iniciada: 2026-05-10 09:17:19
+======================================================================
+[2026-05-10 09:17:19] [INFO        ] GestorSistema inicializado. Sistema SOFTRESERVE listo.
+[2026-05-10 09:17:19] [INFO        ] Cliente registrado: Ana Torres [6E74846C] | ana.torres@softreserve.com
+[2026-05-10 09:17:19] [INFO        ] Cliente registrado: Carlos Mendoza [C4E646C5] | cmendoza@empresa.co
+[2026-05-10 09:17:19] [INFO        ] Cliente registrado: Laura Ríos [14C64610] | lrios@correo.com
+[2026-05-10 09:17:19] [ERROR       ] Fallo al registrar cliente '' | ClienteInvalidoError: [Código 1001] Dato inválido en el campo 'nombre' (valor recibido: ''). Razón: debe tener al menos 3 caracteres
+[2026-05-10 09:17:19] [ERROR       ] Fallo al registrar cliente '12Hacker99' | ClienteInvalidoError: [Código 1001] Dato inválido en el campo 'nombre' (valor recibido: '12Hacker99'). Razón: solo se permiten letras y espacios
+[2026-05-10 09:17:19] [ERROR       ] Fallo al registrar cliente 'Pedro Ruiz' | ClienteInvalidoError: [Código 1001] Dato inválido en el campo 'correo' (valor recibido: 'correo-invalido'). Razón: formato inválido (ej: usuario@dominio.com)
+[2026-05-10 09:17:19] [ERROR       ] Fallo al registrar cliente 'Sofía Cruz' | ClienteInvalidoError: [Código 1001] Dato inválido en el campo 'telefono' (valor recibido: 'abc-xyz'). Razón: formato inválido (ej: +57 310 5551234 o 3105551234)
+[2026-05-10 09:17:19] [INFO        ] Servicio registrado: 'Sala A' [B80AD592] | Base: $80,000
+[2026-05-10 09:17:19] [INFO        ] Servicio registrado: 'Sala B' [D86A154C] | Base: $50,000
+[2026-05-10 09:17:19] [INFO        ] Servicio registrado: 'Portátil HP ProBook' [BE495A25] | Base: $35,000
+[2026-05-10 09:17:19] [INFO        ] Servicio registrado: 'Asesoría en Arquitectura de Software' [B544647C] | Base: $120,000
+[2026-05-10 09:17:19] [INFO        ] Reserva creada [FE04E5ED] | Cliente: Ana Torres | Servicio: Sala A | Estado: PENDIENTE
+[2026-05-10 09:17:19] [INFO        ] Reserva FE04E5ED CONFIRMADA | Cliente: Ana Torres | Servicio: Sala A | Costo: $342,720.00
+[2026-05-10 09:17:19] [INFO        ] Intento de confirmación procesado — Reserva FE04E5ED → Estado final: CONFIRMADA
+[2026-05-10 09:17:19] [INFO        ] Reserva creada [A37BD15D] | Cliente: Carlos Mendoza | Servicio: Portátil HP ProBook | Estado: PENDIENTE
+[2026-05-10 09:17:19] [INFO        ] Reserva A37BD15D CONFIRMADA | Cliente: Carlos Mendoza | Servicio: Portátil HP ProBook | Costo: $791,350.00
+[2026-05-10 09:17:19] [INFO        ] Intento de confirmación procesado — Reserva A37BD15D → Estado final: CONFIRMADA
+[2026-05-10 09:17:19] [INFO        ] Reserva creada [13E5DA63] | Cliente: Laura Ríos | Servicio: Asesoría en Arquitectura de Software | Estado: PENDIENTE
+[2026-05-10 09:17:19] [INFO        ] Reserva 13E5DA63 CONFIRMADA | Cliente: Laura Ríos | Servicio: Asesoría en Arquitectura de Software | Costo: $1,156,680.00
+[2026-05-10 09:17:19] [INFO        ] Intento de confirmación procesado — Reserva 13E5DA63 → Estado final: CONFIRMADA
+[2026-05-10 09:17:19] [INFO        ] Reserva creada [AC826517] | Cliente: Ana Torres | Servicio: Sala A | Estado: PENDIENTE
+[2026-05-10 09:17:19] [ERROR       ] Error al confirmar reserva AC826517 (Servicio: Sala A) | DuracionInvalidaError: [Código 3002] Duración 12.0h fuera del rango permitido [1.0h – 8.0h].
+[2026-05-10 09:17:19] [INFO        ] Intento de confirmación procesado — Reserva AC826517 → Estado final: PENDIENTE
+[2026-05-10 09:17:19] [ERROR       ] No se pudo confirmar reserva [AC826517] | DuracionInvalidaError: [Código 3002] Duración 12.0h fuera del rango permitido [1.0h – 8.0h].
+[2026-05-10 09:17:19] [INFO        ] Reserva creada [269A20E0] | Cliente: Carlos Mendoza | Servicio: Sala B | Estado: PENDIENTE
+[2026-05-10 09:17:19] [ERROR       ] Error al confirmar reserva 269A20E0 (Servicio: Sala B) | CapacidadExcedidaError: [Código 2003] El servicio 'Sala B' permite máximo 6 participante(s), pero se solicitaron 15.
+[2026-05-10 09:17:19] [INFO        ] Intento de confirmación procesado — Reserva 269A20E0 → Estado final: PENDIENTE
+[2026-05-10 09:17:19] [ERROR       ] No se pudo confirmar reserva [269A20E0] | CapacidadExcedidaError: [Código 2003] El servicio 'Sala B' permite máximo 6 participante(s), pero se solicitaron 15.
+[2026-05-10 09:17:19] [INFO        ] Reserva 13E5DA63 CANCELADA | Motivo: El cliente reprogramó la sesión | Cliente: Laura Ríos
+[2026-05-10 09:17:19] [ERROR       ] No se pudo cancelar reserva [13E5DA63] | ReservaCanceladaError: [Código 3003] La reserva '13E5DA63' ya fue cancelada y no puede modificarse.
+[2026-05-10 09:17:19] [ERROR       ] Doble cancelación intentada | ReservaInvalidaError: [Código 3001] Reserva inválida: intento de doble cancelación detectado | Causa original: [Código 3003] La reserva '13E5DA63' ya fue cancelada y no puede modificarse.
+[2026-05-10 09:17:19] [INFO        ] Reserva creada [907F91FF] | Cliente: Ana Torres | Servicio: Portátil HP ProBook | Estado: PENDIENTE
+[2026-05-10 09:17:19] [ERROR       ] Error al confirmar reserva 907F91FF (Servicio: Portátil HP ProBook) | ServicioNoDisponibleError: [Código 2001] El servicio 'Portátil HP ProBook' no está disponible. Motivo: el servicio ha sido deshabilitado por el administrador
+[2026-05-10 09:17:19] [INFO        ] Intento de confirmación procesado — Reserva 907F91FF → Estado final: PENDIENTE
+[2026-05-10 09:17:19] [ERROR       ] No se pudo confirmar reserva [907F91FF] | ServicioNoDisponibleError: [Código 2001] El servicio 'Portátil HP ProBook' no está disponible. Motivo: el servicio ha sido deshabilitado por el administrador
+[2026-05-10 09:17:19] [INFO        ] Reserva creada [E3BA0F7D] | Cliente: Laura Ríos | Servicio: Sala B | Estado: PENDIENTE
+[2026-05-10 09:17:19] [INFO        ] Reserva E3BA0F7D CONFIRMADA | Cliente: Laura Ríos | Servicio: Sala B | Costo: $113,050.00
+[2026-05-10 09:17:19] [INFO        ] Intento de confirmación procesado — Reserva E3BA0F7D → Estado final: CONFIRMADA
+[2026-05-10 09:17:19] [INFO        ] Reserva E3BA0F7D PROCESADA | Servicio prestado: Sala B | Cliente: Laura Ríos
+
+======================================================================
+  SISTEMA SOFTRESERVE — Sesión iniciada: 2026-05-10 09:18:07
+======================================================================
+[2026-05-10 09:18:07] [INFO        ] GestorSistema inicializado. Sistema SOFTRESERVE listo.
+[2026-05-10 09:18:07] [INFO        ] Cliente registrado: Ana Torres [D439BEE7] | ana.torres@softreserve.com
+[2026-05-10 09:18:07] [INFO        ] Cliente registrado: Carlos Mendoza [B283688C] | cmendoza@empresa.co
+[2026-05-10 09:18:07] [INFO        ] Cliente registrado: Laura Ríos [507709F8] | lrios@correo.com
+[2026-05-10 09:18:07] [ERROR       ] Fallo al registrar cliente '' | ClienteInvalidoError: [Código 1001] Dato inválido en el campo 'nombre' (valor recibido: ''). Razón: debe tener al menos 3 caracteres
+[2026-05-10 09:18:07] [ERROR       ] Fallo al registrar cliente '12Hacker99' | ClienteInvalidoError: [Código 1001] Dato inválido en el campo 'nombre' (valor recibido: '12Hacker99'). Razón: solo se permiten letras y espacios
+[2026-05-10 09:18:07] [ERROR       ] Fallo al registrar cliente 'Pedro Ruiz' | ClienteInvalidoError: [Código 1001] Dato inválido en el campo 'correo' (valor recibido: 'correo-invalido'). Razón: formato inválido (ej: usuario@dominio.com)
+[2026-05-10 09:18:07] [ERROR       ] Fallo al registrar cliente 'Sofía Cruz' | ClienteInvalidoError: [Código 1001] Dato inválido en el campo 'telefono' (valor recibido: 'abc-xyz'). Razón: formato inválido (ej: +57 310 5551234 o 3105551234)
+[2026-05-10 09:18:07] [INFO        ] Servicio registrado: 'Sala A' [6B456E43] | Base: $80,000
+[2026-05-10 09:18:07] [INFO        ] Servicio registrado: 'Sala B' [9F6668A2] | Base: $50,000
+[2026-05-10 09:18:07] [INFO        ] Servicio registrado: 'Portátil HP ProBook' [B77AF374] | Base: $35,000
+[2026-05-10 09:18:07] [INFO        ] Servicio registrado: 'Asesoría en Arquitectura de Software' [8FD6C424] | Base: $120,000
+[2026-05-10 09:18:07] [INFO        ] Reserva creada [6E4988BD] | Cliente: Ana Torres | Servicio: Sala A | Estado: PENDIENTE
+[2026-05-10 09:18:07] [INFO        ] Reserva 6E4988BD CONFIRMADA | Cliente: Ana Torres | Servicio: Sala A | Costo: $342,720.00
+[2026-05-10 09:18:07] [INFO        ] Intento de confirmación procesado — Reserva 6E4988BD → Estado final: CONFIRMADA
+[2026-05-10 09:18:07] [INFO        ] Reserva creada [3C467D41] | Cliente: Carlos Mendoza | Servicio: Portátil HP ProBook | Estado: PENDIENTE
+[2026-05-10 09:18:07] [INFO        ] Reserva 3C467D41 CONFIRMADA | Cliente: Carlos Mendoza | Servicio: Portátil HP ProBook | Costo: $791,350.00
+[2026-05-10 09:18:07] [INFO        ] Intento de confirmación procesado — Reserva 3C467D41 → Estado final: CONFIRMADA
+[2026-05-10 09:18:07] [INFO        ] Reserva creada [1BC67692] | Cliente: Laura Ríos | Servicio: Asesoría en Arquitectura de Software | Estado: PENDIENTE
+[2026-05-10 09:18:07] [INFO        ] Reserva 1BC67692 CONFIRMADA | Cliente: Laura Ríos | Servicio: Asesoría en Arquitectura de Software | Costo: $1,156,680.00
+[2026-05-10 09:18:07] [INFO        ] Intento de confirmación procesado — Reserva 1BC67692 → Estado final: CONFIRMADA
+[2026-05-10 09:18:07] [INFO        ] Reserva creada [71D6674A] | Cliente: Ana Torres | Servicio: Sala A | Estado: PENDIENTE
+[2026-05-10 09:18:07] [ERROR       ] Error al confirmar reserva 71D6674A (Servicio: Sala A) | DuracionInvalidaError: [Código 3002] Duración 12.0h fuera del rango permitido [1.0h – 8.0h].
+[2026-05-10 09:18:07] [INFO        ] Intento de confirmación procesado — Reserva 71D6674A → Estado final: PENDIENTE
+[2026-05-10 09:18:07] [ERROR       ] No se pudo confirmar reserva [71D6674A] | DuracionInvalidaError: [Código 3002] Duración 12.0h fuera del rango permitido [1.0h – 8.0h].
+[2026-05-10 09:18:07] [INFO        ] Reserva creada [C64B9903] | Cliente: Carlos Mendoza | Servicio: Sala B | Estado: PENDIENTE
+[2026-05-10 09:18:07] [ERROR       ] Error al confirmar reserva C64B9903 (Servicio: Sala B) | CapacidadExcedidaError: [Código 2003] El servicio 'Sala B' permite máximo 6 participante(s), pero se solicitaron 15.
+[2026-05-10 09:18:07] [INFO        ] Intento de confirmación procesado — Reserva C64B9903 → Estado final: PENDIENTE
+[2026-05-10 09:18:07] [ERROR       ] No se pudo confirmar reserva [C64B9903] | CapacidadExcedidaError: [Código 2003] El servicio 'Sala B' permite máximo 6 participante(s), pero se solicitaron 15.
+[2026-05-10 09:18:07] [INFO        ] Reserva 1BC67692 CANCELADA | Motivo: El cliente reprogramó la sesión | Cliente: Laura Ríos
+[2026-05-10 09:18:07] [ERROR       ] No se pudo cancelar reserva [1BC67692] | ReservaCanceladaError: [Código 3003] La reserva '1BC67692' ya fue cancelada y no puede modificarse.
+[2026-05-10 09:18:07] [ERROR       ] Doble cancelación intentada | ReservaInvalidaError: [Código 3001] Reserva inválida: intento de doble cancelación detectado | Causa original: [Código 3003] La reserva '1BC67692' ya fue cancelada y no puede modificarse.
+[2026-05-10 09:18:07] [INFO        ] Reserva creada [5B551ADD] | Cliente: Ana Torres | Servicio: Portátil HP ProBook | Estado: PENDIENTE
+[2026-05-10 09:18:07] [ERROR       ] Error al confirmar reserva 5B551ADD (Servicio: Portátil HP ProBook) | ServicioNoDisponibleError: [Código 2001] El servicio 'Portátil HP ProBook' no está disponible. Motivo: el servicio ha sido deshabilitado por el administrador
+[2026-05-10 09:18:07] [INFO        ] Intento de confirmación procesado — Reserva 5B551ADD → Estado final: PENDIENTE
+[2026-05-10 09:18:07] [ERROR       ] No se pudo confirmar reserva [5B551ADD] | ServicioNoDisponibleError: [Código 2001] El servicio 'Portátil HP ProBook' no está disponible. Motivo: el servicio ha sido deshabilitado por el administrador
+[2026-05-10 09:18:07] [INFO        ] Reserva creada [2372C463] | Cliente: Laura Ríos | Servicio: Sala B | Estado: PENDIENTE
+[2026-05-10 09:18:07] [INFO        ] Reserva 2372C463 CONFIRMADA | Cliente: Laura Ríos | Servicio: Sala B | Costo: $113,050.00
+[2026-05-10 09:18:07] [INFO        ] Intento de confirmación procesado — Reserva 2372C463 → Estado final: CONFIRMADA
+[2026-05-10 09:18:07] [INFO        ] Reserva 2372C463 PROCESADA | Servicio prestado: Sala B | Cliente: Laura Ríos
+
+======================================================================
+  SISTEMA SOFTRESERVE — Sesión iniciada: 2026-05-10 09:18:17
+======================================================================
+[2026-05-10 09:18:18] [INFO        ] GestorSistema inicializado. Sistema SOFTRESERVE listo.
+[2026-05-10 09:18:18] [INFO        ] Cliente registrado: Ana Torres [C5397189] | ana.torres@softreserve.com
+[2026-05-10 09:18:18] [INFO        ] Cliente registrado: Carlos Mendoza [39977F38] | cmendoza@empresa.co
+[2026-05-10 09:18:18] [INFO        ] Cliente registrado: Laura Ríos [68E43149] | lrios@correo.com
+[2026-05-10 09:18:18] [ERROR       ] Fallo al registrar cliente '' | ClienteInvalidoError: [Código 1001] Dato inválido en el campo 'nombre' (valor recibido: ''). Razón: debe tener al menos 3 caracteres
+[2026-05-10 09:18:18] [ERROR       ] Fallo al registrar cliente '12Hacker99' | ClienteInvalidoError: [Código 1001] Dato inválido en el campo 'nombre' (valor recibido: '12Hacker99'). Razón: solo se permiten letras y espacios
+[2026-05-10 09:18:18] [ERROR       ] Fallo al registrar cliente 'Pedro Ruiz' | ClienteInvalidoError: [Código 1001] Dato inválido en el campo 'correo' (valor recibido: 'correo-invalido'). Razón: formato inválido (ej: usuario@dominio.com)
+[2026-05-10 09:18:18] [ERROR       ] Fallo al registrar cliente 'Sofía Cruz' | ClienteInvalidoError: [Código 1001] Dato inválido en el campo 'telefono' (valor recibido: 'abc-xyz'). Razón: formato inválido (ej: +57 310 5551234 o 3105551234)
+[2026-05-10 09:18:18] [INFO        ] Servicio registrado: 'Sala A' [17A9E4C5] | Base: $80,000
+[2026-05-10 09:18:18] [INFO        ] Servicio registrado: 'Sala B' [029765DD] | Base: $50,000
+[2026-05-10 09:18:18] [INFO        ] Servicio registrado: 'Portátil HP ProBook' [9C53B616] | Base: $35,000
+[2026-05-10 09:18:18] [INFO        ] Servicio registrado: 'Asesoría en Arquitectura de Software' [B07271AF] | Base: $120,000
+[2026-05-10 09:18:18] [INFO        ] Reserva creada [491FD5D5] | Cliente: Ana Torres | Servicio: Sala A | Estado: PENDIENTE
+[2026-05-10 09:18:18] [INFO        ] Reserva 491FD5D5 CONFIRMADA | Cliente: Ana Torres | Servicio: Sala A | Costo: $342,720.00
+[2026-05-10 09:18:18] [INFO        ] Intento de confirmación procesado — Reserva 491FD5D5 → Estado final: CONFIRMADA
+[2026-05-10 09:18:18] [INFO        ] Reserva creada [77479E74] | Cliente: Carlos Mendoza | Servicio: Portátil HP ProBook | Estado: PENDIENTE
+[2026-05-10 09:18:18] [INFO        ] Reserva 77479E74 CONFIRMADA | Cliente: Carlos Mendoza | Servicio: Portátil HP ProBook | Costo: $791,350.00
+[2026-05-10 09:18:18] [INFO        ] Intento de confirmación procesado — Reserva 77479E74 → Estado final: CONFIRMADA
+[2026-05-10 09:18:18] [INFO        ] Reserva creada [4BE8100E] | Cliente: Laura Ríos | Servicio: Asesoría en Arquitectura de Software | Estado: PENDIENTE
+[2026-05-10 09:18:18] [INFO        ] Reserva 4BE8100E CONFIRMADA | Cliente: Laura Ríos | Servicio: Asesoría en Arquitectura de Software | Costo: $1,156,680.00
+[2026-05-10 09:18:18] [INFO        ] Intento de confirmación procesado — Reserva 4BE8100E → Estado final: CONFIRMADA
+[2026-05-10 09:18:18] [INFO        ] Reserva creada [F9CCCEBA] | Cliente: Ana Torres | Servicio: Sala A | Estado: PENDIENTE
+[2026-05-10 09:18:18] [ERROR       ] Error al confirmar reserva F9CCCEBA (Servicio: Sala A) | DuracionInvalidaError: [Código 3002] Duración 12.0h fuera del rango permitido [1.0h – 8.0h].
+[2026-05-10 09:18:18] [INFO        ] Intento de confirmación procesado — Reserva F9CCCEBA → Estado final: PENDIENTE
+[2026-05-10 09:18:18] [ERROR       ] No se pudo confirmar reserva [F9CCCEBA] | DuracionInvalidaError: [Código 3002] Duración 12.0h fuera del rango permitido [1.0h – 8.0h].
+[2026-05-10 09:18:18] [INFO        ] Reserva creada [18E75FD2] | Cliente: Carlos Mendoza | Servicio: Sala B | Estado: PENDIENTE
+[2026-05-10 09:18:18] [ERROR       ] Error al confirmar reserva 18E75FD2 (Servicio: Sala B) | CapacidadExcedidaError: [Código 2003] El servicio 'Sala B' permite máximo 6 participante(s), pero se solicitaron 15.
+[2026-05-10 09:18:18] [INFO        ] Intento de confirmación procesado — Reserva 18E75FD2 → Estado final: PENDIENTE
+[2026-05-10 09:18:18] [ERROR       ] No se pudo confirmar reserva [18E75FD2] | CapacidadExcedidaError: [Código 2003] El servicio 'Sala B' permite máximo 6 participante(s), pero se solicitaron 15.
+[2026-05-10 09:18:18] [INFO        ] Reserva 4BE8100E CANCELADA | Motivo: El cliente reprogramó la sesión | Cliente: Laura Ríos
+[2026-05-10 09:18:18] [ERROR       ] No se pudo cancelar reserva [4BE8100E] | ReservaCanceladaError: [Código 3003] La reserva '4BE8100E' ya fue cancelada y no puede modificarse.
+[2026-05-10 09:18:18] [ERROR       ] Doble cancelación intentada | ReservaInvalidaError: [Código 3001] Reserva inválida: intento de doble cancelación detectado | Causa original: [Código 3003] La reserva '4BE8100E' ya fue cancelada y no puede modificarse.
+[2026-05-10 09:18:18] [INFO        ] Reserva creada [E8A95138] | Cliente: Ana Torres | Servicio: Portátil HP ProBook | Estado: PENDIENTE
+[2026-05-10 09:18:18] [ERROR       ] Error al confirmar reserva E8A95138 (Servicio: Portátil HP ProBook) | ServicioNoDisponibleError: [Código 2001] El servicio 'Portátil HP ProBook' no está disponible. Motivo: el servicio ha sido deshabilitado por el administrador
+[2026-05-10 09:18:18] [INFO        ] Intento de confirmación procesado — Reserva E8A95138 → Estado final: PENDIENTE
+[2026-05-10 09:18:18] [ERROR       ] No se pudo confirmar reserva [E8A95138] | ServicioNoDisponibleError: [Código 2001] El servicio 'Portátil HP ProBook' no está disponible. Motivo: el servicio ha sido deshabilitado por el administrador
+[2026-05-10 09:18:18] [INFO        ] Reserva creada [5974B890] | Cliente: Laura Ríos | Servicio: Sala B | Estado: PENDIENTE
+[2026-05-10 09:18:18] [INFO        ] Reserva 5974B890 CONFIRMADA | Cliente: Laura Ríos | Servicio: Sala B | Costo: $113,050.00
+[2026-05-10 09:18:18] [INFO        ] Intento de confirmación procesado — Reserva 5974B890 → Estado final: CONFIRMADA
+[2026-05-10 09:18:18] [INFO        ] Reserva 5974B890 PROCESADA | Servicio prestado: Sala B | Cliente: Laura Ríos
+
+======================================================================
+  SISTEMA SOFTRESERVE — Sesión iniciada: 2026-05-10 09:19:51
+======================================================================
+[2026-05-10 09:19:51] [INFO        ] GestorSistema inicializado. Sistema SOFTRESERVE listo.
+[2026-05-10 09:19:51] [INFO        ] Cliente registrado: Ana Torres [43E20C54] | ana.torres@softreserve.com
+[2026-05-10 09:19:51] [INFO        ] Cliente registrado: Carlos Mendoza [43CB5427] | cmendoza@empresa.co
+[2026-05-10 09:19:51] [INFO        ] Cliente registrado: Laura Ríos [9DFF2F1C] | lrios@correo.com
+[2026-05-10 09:19:51] [ERROR       ] Fallo al registrar cliente '' | ClienteInvalidoError: [Código 1001] Dato inválido en el campo 'nombre' (valor recibido: ''). Razón: debe tener al menos 3 caracteres
+[2026-05-10 09:19:51] [ERROR       ] Fallo al registrar cliente '12Hacker99' | ClienteInvalidoError: [Código 1001] Dato inválido en el campo 'nombre' (valor recibido: '12Hacker99'). Razón: solo se permiten letras y espacios
+[2026-05-10 09:19:51] [ERROR       ] Fallo al registrar cliente 'Pedro Ruiz' | ClienteInvalidoError: [Código 1001] Dato inválido en el campo 'correo' (valor recibido: 'correo-invalido'). Razón: formato inválido (ej: usuario@dominio.com)
+[2026-05-10 09:19:51] [ERROR       ] Fallo al registrar cliente 'Sofía Cruz' | ClienteInvalidoError: [Código 1001] Dato inválido en el campo 'telefono' (valor recibido: 'abc-xyz'). Razón: formato inválido (ej: +57 310 5551234 o 3105551234)
+[2026-05-10 09:19:51] [INFO        ] Servicio registrado: 'Sala A' [514CF0E2] | Base: $80,000
+[2026-05-10 09:19:51] [INFO        ] Servicio registrado: 'Sala B' [D2754A6A] | Base: $50,000
+[2026-05-10 09:19:51] [INFO        ] Servicio registrado: 'Portátil HP ProBook' [3413CE6F] | Base: $35,000
+[2026-05-10 09:19:51] [INFO        ] Servicio registrado: 'Asesoría en Arquitectura de Software' [25842633] | Base: $120,000
+[2026-05-10 09:19:51] [INFO        ] Reserva creada [C1417298] | Cliente: Ana Torres | Servicio: Sala A | Estado: PENDIENTE
+[2026-05-10 09:19:51] [INFO        ] Reserva C1417298 CONFIRMADA | Cliente: Ana Torres | Servicio: Sala A | Costo: $342,720.00
+[2026-05-10 09:19:51] [INFO        ] Intento de confirmación procesado — Reserva C1417298 → Estado final: CONFIRMADA
+[2026-05-10 09:19:51] [INFO        ] Reserva creada [2F3FC917] | Cliente: Carlos Mendoza | Servicio: Portátil HP ProBook | Estado: PENDIENTE
+[2026-05-10 09:19:51] [INFO        ] Reserva 2F3FC917 CONFIRMADA | Cliente: Carlos Mendoza | Servicio: Portátil HP ProBook | Costo: $791,350.00
+[2026-05-10 09:19:51] [INFO        ] Intento de confirmación procesado — Reserva 2F3FC917 → Estado final: CONFIRMADA
+[2026-05-10 09:19:51] [INFO        ] Reserva creada [E01C6E2C] | Cliente: Laura Ríos | Servicio: Asesoría en Arquitectura de Software | Estado: PENDIENTE
+[2026-05-10 09:19:51] [INFO        ] Reserva E01C6E2C CONFIRMADA | Cliente: Laura Ríos | Servicio: Asesoría en Arquitectura de Software | Costo: $1,156,680.00
+[2026-05-10 09:19:51] [INFO        ] Intento de confirmación procesado — Reserva E01C6E2C → Estado final: CONFIRMADA
+[2026-05-10 09:19:51] [INFO        ] Reserva creada [812FB8DD] | Cliente: Ana Torres | Servicio: Sala A | Estado: PENDIENTE
+[2026-05-10 09:19:51] [ERROR       ] Error al confirmar reserva 812FB8DD (Servicio: Sala A) | DuracionInvalidaError: [Código 3002] Duración 12.0h fuera del rango permitido [1.0h – 8.0h].
+[2026-05-10 09:19:51] [INFO        ] Intento de confirmación procesado — Reserva 812FB8DD → Estado final: PENDIENTE
+[2026-05-10 09:19:51] [ERROR       ] No se pudo confirmar reserva [812FB8DD] | DuracionInvalidaError: [Código 3002] Duración 12.0h fuera del rango permitido [1.0h – 8.0h].
+[2026-05-10 09:19:51] [INFO        ] Reserva creada [C03C6474] | Cliente: Carlos Mendoza | Servicio: Sala B | Estado: PENDIENTE
+[2026-05-10 09:19:51] [ERROR       ] Error al confirmar reserva C03C6474 (Servicio: Sala B) | CapacidadExcedidaError: [Código 2003] El servicio 'Sala B' permite máximo 6 participante(s), pero se solicitaron 15.
+[2026-05-10 09:19:51] [INFO        ] Intento de confirmación procesado — Reserva C03C6474 → Estado final: PENDIENTE
+[2026-05-10 09:19:51] [ERROR       ] No se pudo confirmar reserva [C03C6474] | CapacidadExcedidaError: [Código 2003] El servicio 'Sala B' permite máximo 6 participante(s), pero se solicitaron 15.
+[2026-05-10 09:19:51] [INFO        ] Reserva E01C6E2C CANCELADA | Motivo: El cliente reprogramó la sesión | Cliente: Laura Ríos
+[2026-05-10 09:19:51] [ERROR       ] No se pudo cancelar reserva [E01C6E2C] | ReservaCanceladaError: [Código 3003] La reserva 'E01C6E2C' ya fue cancelada y no puede modificarse.
+[2026-05-10 09:19:51] [ERROR       ] Doble cancelación intentada | ReservaInvalidaError: [Código 3001] Reserva inválida: intento de doble cancelación detectado | Causa original: [Código 3003] La reserva 'E01C6E2C' ya fue cancelada y no puede modificarse.
+[2026-05-10 09:19:51] [INFO        ] Reserva creada [570F080B] | Cliente: Ana Torres | Servicio: Portátil HP ProBook | Estado: PENDIENTE
+[2026-05-10 09:19:51] [ERROR       ] Error al confirmar reserva 570F080B (Servicio: Portátil HP ProBook) | ServicioNoDisponibleError: [Código 2001] El servicio 'Portátil HP ProBook' no está disponible. Motivo: el servicio ha sido deshabilitado por el administrador
+[2026-05-10 09:19:51] [INFO        ] Intento de confirmación procesado — Reserva 570F080B → Estado final: PENDIENTE
+[2026-05-10 09:19:51] [ERROR       ] No se pudo confirmar reserva [570F080B] | ServicioNoDisponibleError: [Código 2001] El servicio 'Portátil HP ProBook' no está disponible. Motivo: el servicio ha sido deshabilitado por el administrador
+[2026-05-10 09:19:51] [INFO        ] Reserva creada [9D60D09E] | Cliente: Laura Ríos | Servicio: Sala B | Estado: PENDIENTE
+[2026-05-10 09:19:51] [INFO        ] Reserva 9D60D09E CONFIRMADA | Cliente: Laura Ríos | Servicio: Sala B | Costo: $113,050.00
+[2026-05-10 09:19:51] [INFO        ] Intento de confirmación procesado — Reserva 9D60D09E → Estado final: CONFIRMADA
+[2026-05-10 09:19:51] [INFO        ] Reserva 9D60D09E PROCESADA | Servicio prestado: Sala B | Cliente: Laura Ríos
